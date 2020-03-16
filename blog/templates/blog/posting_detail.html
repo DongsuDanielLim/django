@@ -1,0 +1,19 @@
+{% extends 'blog/base_posting.html' %}
+
+{% block content %}
+  <div class="post">
+    {% if posting.published_date %}
+      <div class="date">
+        {{ posting.published_date }}
+      </div>
+    {% endif %}
+    <h1>{{ posting.name }}</h1>
+    <p>{{ posting.link|linebreaksbr }}</p>
+    <p>{{ posting.name|linebreaksbr }}</p>
+    <p>{{ posting.lat|linebreaksbr }}</p>
+    <p>{{ posting.lng|linebreaksbr }}</p>
+    <p>{{ posting.country_name|linebreaksbr }}</p>
+    <p>{{ posting.city_name|linebreaksbr }}</p>
+    <p>{{ posting.posting_cnt|linebreaksbr }}</p>
+  </div>
+{% endblock %}
